@@ -8,3 +8,4 @@ Running that code will result in the [My_Project.pdf]("https://github.com/Sdniss
 A few small mentions for the code:
 1. `pdf = PDF('Author', 'My Project')` will initiate the PDF automatically with a title page
 2. Use `.write_text()` instead of the built-in function `.write()` so you do not have to specify the line height every time.
+3. As mentioned by [this article](https://towardsdatascience.com/creating-pdf-files-with-python-ad3ccadfae0f), you should view pdf changes in your browser instead of a local computer application, since otherwise it might cause an error with the next run. 
