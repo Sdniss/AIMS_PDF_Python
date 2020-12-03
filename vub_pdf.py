@@ -152,16 +152,23 @@ class PDF(FPDF):
         self.set_font('Arial', '', self.fontsize_dict.get('regular'))
         self.write(self.line_height_dict.get('regular'), '\n')
 
-    def add_figure(self, path, name, ext, image_h = None):
+    def add_figure(self, path_or_url, image_h = None):
         if image_h is None:
             image_h = 30
         space_left_on_page = self.pdf_h-self.b_margin - self.get_y()
         if image_h > space_left_on_page:
             self.add_page()
-        self.image(f'{path}{name}{ext}', x = self.l_margin, y = self.get_y(), h = image_h)
+        self.image(path_or_url, x = self.l_margin, y = self.get_y(), h = image_h)
         self.set_y(self.get_y()+image_h)
 
-    def save(self, name, path):
+    def save(self, path = '', name = None):
+        """ By default saves the image as the name of your project in the same folder
+
+        :param path: str, path to the location where you want to store the image. Default is empty, so same folder
+        :param name: str, optional. Default is the project name where spaces replaced by underscores
+        """
+        if name is None:
+            name = '_'.join(self.project.split(' '))
         self.output(name=f'{path}{name}.pdf', dest='F')
 
     def footer(self):
