@@ -9,9 +9,7 @@ data_dict = {'column_1': range(0,10),
              'column_5': range(40,50),
              'column_6': range(50,60),
              'column_7': range(60,70),
-             'column_8': range(70,80),
-             'column_9': range(80,90),
-             'column_10': range(90,100)}
+             'column_8': range(70,80)}
 df = pd.DataFrame(data_dict)
 
 # PDF creation section
