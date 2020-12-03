@@ -1,4 +1,4 @@
-# VUB_PDF_Python
+# AIMS_PDF_Python
 Code to easily create a pdf integrating all your values, tables and figures in VUB-AIMS format during coding
 
 ## Template
