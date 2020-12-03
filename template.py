@@ -1,4 +1,4 @@
-from vub_pdf import PDF
+from aims_pdf import PDF
 import pandas as pd
 
 # Create a mock df
