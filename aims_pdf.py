@@ -180,7 +180,7 @@ class PDF(FPDF):
         self.set_text_color(128,128,128)
         self.set_font('Arial', 'I', 9)
         self.cell(0, 10, f'{self.project} - {self.page_no()}', 0, 0, 'C')
-        self.image('pdf_input/lower_right.png', x=140, y=263, w=70)
+        self.image('pdf_layout_images/lower_right.png', x=140, y=263, w=70)
         self.set_x(10)
         self.cell(0, 10, f'{self.date.day}/{self.date.month}/{self.date.year}', 0, 0, 'L')
 
@@ -190,5 +190,5 @@ class PDF(FPDF):
         Now, every page that you add with "add_page()" will have this header
         """
         pdf_w = self.pdf_w
-        self.image('pdf_input/aims_logo.jpg', x = 2*(pdf_w/3), y = 0, w=pdf_w/3)
-        self.image('pdf_input/upper_left.png', x = 0, y = 0, w=70)
+        self.image('pdf_layout_images/aims_logo.jpg', x = 2*(pdf_w/3), y = 0, w=pdf_w/3)
+        self.image('pdf_layout_images/upper_left.png', x = 0, y = 0, w=70)
